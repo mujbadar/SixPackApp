@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav ul {
+  margin-left: 9em;
+}
+
+nav li {
+  list-style: none;
+  display: inline-flex;
+  margin-left: 3em;
+}
+
+.main {
+  text-align: center;
+  margin: 8em;
+  border: 1px solid black;
+  padding: 2em;
+}

@@ -2,13 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <% include ../partials/header.ejs %>
+    <link rel="stylesheet" href="/css/auth-page.css">
   </head>
   <body>
-    <h1>Register your account</h1>
-    <form class="" action="/users" method="post">
-      <input type="text" name="username" placeholder="Choose Username">
-      <input type="password" name="password">
-      <input type="submit" name="" value="Create account">
+    <% include ../partials/inner-menu.ejs %>
+    <div class="main">
+      <h1>Register your account</h1>
+      <form class="" action="/users" method="post">
+        <div class="form-group">
+          <input type="text" name="username" placeholder="Choose Username">
+        </div>
+        <div class="form-group">
+          <input type="password" name="password">
+        </div>
+      <input class="btn btn-primary" type="submit" name="" value="Create account">
     </form>
+    </div>
   </body>
 </html>

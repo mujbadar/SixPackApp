@@ -1,16 +1,16 @@
 const express = require('express')
 const router = express.Router()
-const User = require('../models/user.js')
-
+const Workout = require('../models/workout.js')
 
 router.get('/new', (req, res) => {
-  res.render('users/new.ejs')
+  res.render('workouts/new.ejs')
 })
 
 router.post('/', (req, res) => {
-  User.create(req.body, (err, createdUser) => {
-    res.send('User created')
+  Workout.create(req.body, (err, createdWorkout) => {
+    res.send('Workout created')
   })
 })
+
 
 module.exports = router

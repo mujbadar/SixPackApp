@@ -25,7 +25,8 @@ router.get('/new', (req, res) => {
 router.get('/:id', (req, res) => {
   Workout.findById(req.params.id, (error, foundWorkout) => {
     res.render('workouts/showpage.ejs', {
-      workouts: foundWorkout
+      workouts: foundWorkout,
+      excercises: foundWorkout.excercises
     })
   })
 })
@@ -33,7 +34,8 @@ router.get('/:id', (req, res) => {
 //create workout
 router.post('/', (req, res) => {
   Workout.create(req.body, (err, createdWorkout) => {
-    res.send('Workout created')
+    if (err) res.send('there was an error creating ')
+    else res.redirect('/')
   })
 })
 

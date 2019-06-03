@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <% include ../partials/header.ejs %>
   </head>
   <body>
     <h1>Workout</h1>
     <form class="" action="/workouts" method="post">
-      <input type="text" name="name" placeholder="Name">
-      <input type="text" name="description" placeholder="Description">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+        </div>
+        <input type="text" name="name" placeholder="Name">
+      </div>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Description</span>
+        </div>
+        <textarea class="form-control" name="description"></textarea>
+      </div><br>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Excercise</span>
+        </div>
+        <input type="text" name="excercises.title" placeholder="Excercise">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Reps</span>
+        <input type="text" name="excercises.reps" placeholder="Reps">
+      </div>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Excercise</span>
+      </div>
       <input type="text" name="excercises.title" placeholder="Excercise">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Reps</span>
       <input type="text" name="excercises.reps" placeholder="Reps">
-      <input type="submit" name="" value="Create Wokout">
+    </div>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Excercise</span>
+    </div>
+    <input type="text" name="excercises.title" placeholder="Excercise">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Reps</span>
+    <input type="text" name="excercises.reps" placeholder="Reps">
+  </div>
+</div>
+      <input type="submit" class="btn btn-primary" name="" value="Create Workout">
     </form>
     <a href="/">Back</a>
   </body>

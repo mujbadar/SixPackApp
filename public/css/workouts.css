@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 1em;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav ul {
+  margin-left: 9em;
+}
+
+nav li {
+  list-style: none;
+  display: inline-flex;
+  margin-left: 3em;
+}

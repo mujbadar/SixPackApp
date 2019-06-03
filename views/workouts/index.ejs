@@ -2,14 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <% include ../partials/header.ejs %>
+    <link rel="stylesheet" href="/css/workouts.css">
   </head>
   <body>
     <% include ../partials/inner-menu.ejs %>
     <h1>All Workouts</h1>
+    <div class="card-columns">
       <% for (let i = 0; i < workouts.length; i++) { %>
-        <li><a href="/workouts/<%=workouts[i].id%>"><%=workouts[i].name%></a></li>
-      <%}%>
-    <hr>
+        <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><a href="/workouts/<%=workouts[i].id%>"><%=workouts[i].name%></a></h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+        <%}%>
+        </div>
+        <hr>
     <a href="/">Back</a>
   </body>
 </html>

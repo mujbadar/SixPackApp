@@ -2,13 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <% include ../partials/header.ejs %>
+    <link rel="stylesheet" href="/css/workouts.css">
   </head>
   <body>
     <% include ../partials/inner-menu.ejs %>
     <h1><%=workouts.name%></h1>
     <h4><%=workouts.description%></h4>
     <form class="" action="<%=workouts.id%>?_method=DELETE" method="post">
-      <input class="btn btn-primary" type="submit" value="Delete">
+      <input class="btn btn-danger" type="submit" value="Delete">
     </form>
     <hr>
     <table class="table">
@@ -20,11 +21,13 @@
     </tr>
   </thead>
   <tbody>
+    <% for (let i = 0; i < excercises.length; i++) { %>
     <tr>
-      <th scope="row"><%=workouts.excercises.title%></th>
-      <td><%=workouts.excercises.reps%></td>
+      <th scope="row"><%=workouts.excercises.title[i]%></th>
+      <td><%=workouts.excercises.reps[i]%></td>
       <td><a href="<%=workouts.id%>/edit">Edit</a></td>
     </tr>
+  <%}%>
   </tbody>
 </table>
     <hr>

@@ -5,8 +5,8 @@ const workoutShema = new Schema({
   name: String,
   description: String,
   excercises: {
-    title: String,
-    reps: Number
+    title: [String],
+    reps: [Number]
   }
 })
 

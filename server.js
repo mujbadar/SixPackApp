@@ -18,7 +18,7 @@ mongoose.connection.once('open', () => {
 })
 
 //middleware
-app.use(express.urlencoded({newUrlParser: false}))
+app.use(express.urlencoded({useNewUrlParser: false}))
 app.use(express.json())
 app.use(express.static('public'))
 app.use(methodOverride('_method'))

@@ -6,12 +6,12 @@
   </head>
   <body>
     <h1>Workout</h1>
-    <form class="" action="/workouts" method="post">
+    <form class="" action="<%=workouts.id%>?_method=PUT" method="post">
       <input type="text" name="name" value="<%=workouts.name%>">
       <input type="text" name="description" value="<%=workouts.description%>">
       <input type="text" name="excercises.title" value="<%=workouts.excercises.title%>">
       <input type="text" name="excercises.reps" value="<%=workouts.excercises.reps%>">
-      <input type="submit" name="" value="Create Wokout">
+      <input type="submit" name="" value="Submit">
     </form>
     <a href='/workouts/<%=workouts.id%>'>Back to Workouts page</a>
   </body>

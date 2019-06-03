@@ -5,32 +5,37 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <nav class="container">
+    <nav>
       <div class="row">
-        <h3 class="col">SixPackApp</h3>
-        <form class="col" action="/sessions" method="post">
-          <div class="row">
-            <div class="col">
-              <input class="form-control" type="text" name="username" placeholder="Username">
-            </div>
-            <div class="col">
-              <input class="form-control" type="password" name="password">
-            </div>
-            <div class="col">
-              <input class="btn btn-primary" type="submit" name="" value="Login">
-            </div>
-          </div>
-        </form>
-      </div>
-    </nav>
-    <div class="header">
-      <h1>SIXPACKAPP</h1>
-      <h4>The Only workout app you will need!</h4>
-      <a href="/users/new">Sign up</a>
-      <a href="/sessions/Login">Login</a>
+        <h3 class="col-4 logo">SixPackApp</h3>
+        <form class="col-8" action="/sessions" method="post">
+      <div class="row">
+        <div class="col-md login">
+          <input class="form-control-sm" type="text" name="username" placeholder="Username">
+          <input class="form-control-sm" type="password" name="password">
+          <input class="btn btn-primary form-control-sm" type="submit" name="" value="Login">
+        </div>
+      </form>
     </div>
-    <a class="btn btn-primary" href="/workouts/new">Make a new workout</a>
-    <a class="btn btn-secondary" href="/workouts">Show workouts</a>
+    </div>
+    </nav>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>SIXPACKAPP</h1>
+        <h4>The Only workout app you will need!</h4>
+        <a class="btn btn-primary"href="/users/new">Sign up</a>
+      </div>
+    </div>
+    <div class="container main">
+      <div class="row">
+        <div class="col">
+          <a class="btn btn-primary" href="/workouts/new">Make a new workout</a>
+        </div>
+        <div class="col">
+          <a class="btn btn-secondary" href="/workouts">Show workouts</a>
+        </div>
+      </div>
+    </div>
   </body>
   <hr>
   <% include partials/footer.ejs %>

@@ -40,7 +40,7 @@ router.post('/', (req, res) => {
 //delete
 router.delete('/:id', (req, res) => {
   Workout.findByIdAndRemove(req.params.id, (err, data) => {
-    res.redirect('/')
+    res.redirect('/workouts')
   })
 })
 
@@ -50,6 +50,12 @@ router.get('/:id/edit', (req, res) => {
     res.render('workouts/edit.ejs', {
       workouts: foundWorkout
     })
+  })
+})
+
+router.put('/:id', (req, res) => {
+  Workout.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedWorkout) => {
+    res.redirect('/workouts')
   })
 })
 

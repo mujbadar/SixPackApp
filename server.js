@@ -4,6 +4,9 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
+
+//controllers
 const usersController = require('./controllers/users.js')
 const workoutsController = require('./controllers/workouts.js')
 const sessionsController = require('./controllers/sessions.js')
@@ -18,8 +21,9 @@ mongoose.connection.once('open', () => {
 app.use(express.urlencoded({newUrlParser: false}))
 app.use(express.json())
 app.use(express.static('public'))
+app.use(methodOverride('_method'))
 
-//controllers
+//controller routes
 app.use('/users', usersController)
 app.use('/workouts', workoutsController)
 app.use('/sessions', sessionsController)

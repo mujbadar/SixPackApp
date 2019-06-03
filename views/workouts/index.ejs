@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/header.ejs %>
+  </head>
+  <body>
+    <% include ../partials/inner-menu.ejs %>
+    <h1>All Workouts</h1>
+      <% for (let i = 0; i < workouts.length; i++) { %>
+        <li><a href="/workouts/<%=workouts[i].id%>"><%=workouts[i].name%></a></li>
+      <%}%>
+    <hr>
+    <a href="/">Back</a>
+  </body>
+</html>

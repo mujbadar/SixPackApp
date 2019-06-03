@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/header.ejs %>
+  </head>
+  <body>
+    <% include ../partials/inner-menu.ejs %>
+    <h1><%=workouts.name%></h1>
+    <h4><%=workouts.description%></h4>
+    <form class="" action="<%=workouts.id%>?_method=DELETE" method="post">
+      <input type="submit" value="Delete">
+    </form>
+    <hr>
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Excercise</th>
+      <th scope="col">Reps</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><%=workouts.excercises.title%></th>
+      <td><%=workouts.excercises.reps%></td>
+      <td><a href="<%=workouts.id%>/edit">Edit</a></td>
+    </tr>
+  </tbody>
+</table>
+    <hr>
+    <a href='/workouts'>Back to Workouts page</a>
+  </body>
+</html>

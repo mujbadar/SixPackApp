@@ -8,10 +8,19 @@
     <nav class="container">
       <div class="row">
         <h3 class="col">SixPackApp</h3>
-        <ul class="col">
-          <li><a href="/users/new">Sign Up</a></li>
-          <li><a href="/sessions/login">Login</a></li>
-        </ul>
+        <form class="col" action="/sessions" method="post">
+          <div class="row">
+            <div class="col">
+              <input class="form-control" type="text" name="username" placeholder="Username">
+            </div>
+            <div class="col">
+              <input class="form-control" type="password" name="password">
+            </div>
+            <div class="col">
+              <input class="btn btn-primary" type="submit" name="" value="Login">
+            </div>
+          </div>
+        </form>
       </div>
     </nav>
     <div class="header">
@@ -20,7 +29,8 @@
       <a href="/users/new">Sign up</a>
       <a href="/sessions/Login">Login</a>
     </div>
-    <a href="/workouts/new">Make a new workout</a>
+    <a class="btn btn-primary" href="/workouts/new">Make a new workout</a>
+    <a class="btn btn-secondary" href="/workouts">Show workouts</a>
   </body>
   <hr>
   <% include partials/footer.ejs %>

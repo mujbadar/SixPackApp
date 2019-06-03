@@ -4,7 +4,10 @@ const Schema = mongoose.Schema
 const workoutShema = new Schema({
   name: String,
   description: String,
-  reps: Number,
+  excercises: {
+    title: String,
+    reps: Number
+  }
 })
 
 const Workout = mongoose.model('Workout', workoutShema)

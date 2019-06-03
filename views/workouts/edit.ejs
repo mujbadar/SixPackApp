@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Workout</h1>
+    <form class="" action="/workouts" method="post">
+      <input type="text" name="name" value="<%=workouts.name%>">
+      <input type="text" name="description" value="<%=workouts.description%>">
+      <input type="text" name="excercises.title" value="<%=workouts.excercises.title%>">
+      <input type="text" name="excercises.reps" value="<%=workouts.excercises.reps%>">
+      <input type="submit" name="" value="Create Wokout">
+    </form>
+    <a href='/workouts/<%=workouts.id%>'>Back to Workouts page</a>
+  </body>
+</html>

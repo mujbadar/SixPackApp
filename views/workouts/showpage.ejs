@@ -21,13 +21,13 @@
     </tr>
   </thead>
   <tbody>
-    <% for (let i = 0; i < excercises.length; i++) { %>
-    <tr>
-      <th scope="row"><%=workouts.excercises.title[i]%></th>
-      <td><%=workouts.excercises.reps[i]%></td>
+    <% workouts.excercises.title.forEach((title)=>{ %>
+      <tr>
+      <th scope="row"><%=title%></th>
+      <td><%=workouts.excercises.reps%></td>
       <td><a href="<%=workouts.id%>/edit">Edit</a></td>
     </tr>
-  <%}%>
+  <%})%>
   </tbody>
 </table>
     <hr>

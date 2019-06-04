@@ -7,17 +7,37 @@
   <body>
     <% include ../partials/inner-menu.ejs %>
     <h1>All Workouts</h1>
-    <div class="card-columns">
+    <hr>
+    <div class="card-columns tiles">
       <% for (let i = 0; i < workouts.length; i++) { %>
         <div class="card">
-      <img src="..." class="card-img-top" alt="...">
+          <% if (workouts[i].type == 'cardio') { %>
+            <img src="images/icons/running.png" class="card-img-top" alt="cardio-img">
+          <%} else if (workouts[i].type == 'weights') { %>
+            <img src="../images/icons/weightlifting.png" class="card-img-top" alt="weights-img">
+          <%} else if (workouts[i].type == 'yoga') { %>
+            <img src="images/icons/yoga.png" class="card-img-top" alt="yoga-img">
+          <%} else if (workouts[i].type == 'hiit') { %>
+            <img src="images/icons/heart.png" class="card-img-top" alt="hiit-img">
+          <%} else if (workouts[i].type == 'cycling') { %>
+            <img src="images/icons/bicycle.png" class="card-img-top" alt="cycling-img">
+          <%} else if (workouts[i].type == 'calisthenics') { %>
+            <img src="images/icons/pulling-up.png" class="card-img-top" alt="calisthenics-img">
+          <%}%>
       <div class="card-body">
         <h5 class="card-title"><a href="/workouts/<%=workouts[i].id%>"><%=workouts[i].name%></a></h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Description: <%=workouts[i].description%></p>
+        <p>Routine:</p>
+        <ul>
+        <% workouts[i].excercises.title.forEach((title)=>{ %>
+          <li class="card-text"><%=title%></li>
+        <%})%>
+      </ul>
+      <p class="card-text text-muted">Catergory: <%=workouts[i].type%></p>
       </div>
     </div>
-        <%}%>
-        </div>
+    <%}%>
+    </div>
         <hr>
     <a href="/">Back</a>
   </body>

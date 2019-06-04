@@ -35,12 +35,7 @@ app.get('/', (req, res) => {
   res.render('index.ejs')
 })
 
-
-
-
-
-
-
+//Listen
 app.listen(3000, (req, res) => {
   console.log('listening');
 })

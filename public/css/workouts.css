@@ -17,3 +17,7 @@ nav li {
   display: inline-flex;
   margin-left: 3em;
 }
+
+.tiles {
+  margin: 1em;
+}

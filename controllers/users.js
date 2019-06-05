@@ -9,7 +9,9 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
   User.create(req.body, (err, createdUser) => {
-    res.send('User created')
+    res.render('sessions/profile.ejs', {
+      users: createdUser
+    })
   })
 })
 

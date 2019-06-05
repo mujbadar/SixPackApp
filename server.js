@@ -6,6 +6,7 @@ const app = express()
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 
+
 //controllers
 const usersController = require('./controllers/users.js')
 const workoutsController = require('./controllers/workouts.js')

@@ -1,6 +1,9 @@
 {
   "name": "sixpackapp",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.15.3"
+  },
   "description": "// Wireframe ![Image of homepage](images/SPAwf-home.png) ![Image of homepage](images/SPAwf-Login.png) ![Image of homepage](images/SPAwf-profile.png)",
   "main": "server.js",
   "scripts": {
@@ -23,6 +26,13 @@
     "express": "^4.17.1",
     "express-session": "^1.16.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.5.12"
+    "mongoose": "^5.5.12",
+    "socket.io": "^2.2.0"
   }
+  {
+  "name": "socket-chat-example",
+  "version": "0.0.1",
+  "description": "my first socket.io app",
+  "dependencies": {}
+}
 }

@@ -10,7 +10,9 @@ router.get('/login', (req, res) => {
 router.post('/', (req, res) => {
   User.findOne({username: req.body.username}, (err, foundUser) => {
     if (req.body.password == foundUser.password) {
-      res.send('logged in')
+      res.render('sessions/profile.ejs', {
+        users: foundUser
+      })
     } else {
       res.send('Sorry password didnt match')
     }

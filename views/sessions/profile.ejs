@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <% include ../partials/header.ejs %>
+    <link rel="stylesheet" href="/css/profile.css">
   </head>
   <body>
-    <h1>Profile</h1>
-    <p><%=users.username%></p>
+    <% include ../partials/sessions-menu.ejs %>
+    <div class="container">
+      <h1>Profile</h1>
+      <a href="/sessions/edit">Edit</a>
+      <div class="row">
+        <div class="col-6 col-md-4">
+          <div class="prof-pic">
+            <img src="images/icons/user.png" alt="">
+          </div>
+          <p>Name: <%=users.fname%> <%=users.lname%></p>
+          <p>Gender: <%=users.gender%> </p>
+        </div>
+        <div class="col-12 col-md-8">
+          <h5>Username: <%=users.username%></h5>
+          <p>Height: <%=users.height%></p>
+          <p>Weight: <%=users.weight%></p>
+        </div>
+      </div>
+
+    </div>
+
+
   </body>
 </html>

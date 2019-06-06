@@ -29,10 +29,5 @@
     "mongoose": "^5.5.12",
     "socket.io": "^2.2.0"
   }
-  {
-  "name": "socket-chat-example",
-  "version": "0.0.1",
-  "description": "my first socket.io app",
-  "dependencies": {}
-}
+  
 }

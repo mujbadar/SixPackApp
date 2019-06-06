@@ -1,0 +1,18 @@
+nav a {
+  text-decoration: none;
+}
+
+nav ul {
+  margin-left: 9em;
+}
+
+nav li {
+  list-style: none;
+  display: inline-flex;
+  margin-left: 3em;
+}
+
+.prof-pic img {
+  height: 60%;
+  width: 60%;
+}

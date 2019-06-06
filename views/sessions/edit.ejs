@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/header.ejs %>
+    <link rel="stylesheet" href="/css/auth-page.css">
+  </head>
+  <body>
+    <% include ../partials/inner-menu.ejs %>
+    <div class="main">
+      <h1>Edit Profile</h1>
+      <form class="" action="/sessions/new" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" class="form-contol" id="inputAddress" name="username" placeholder="Choose Username">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="password" class="form-contol" id="inputAddress" name="password" placeholder="Choose Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputEmail4" name="fname" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputPassword4" name="lname" placeholder="Last Name">
+        </div>
+        <div class="form-row">
+          <select name="gender" class="custom-select">
+            <option selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select><br>
+          <div class="form-group col-md-2">
+            <input type="text" name="dob"class="form-control" id="inputCity" placeholder="D.O.B">
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" name="height" class="form-control" id="inputCity" placeholder="Height">
+          </div>
+          <div class="form-group col-md-2">
+            <input type="text" name="weight" class="form-control" id="inputCity" placeholder="Weight">
+          </div>
+        </div>
+      <input class="btn btn-primary" type="submit" name="" value="Create account">
+      <a href="/sessions/profile">Cancel</a>
+    </form>
+    </div>
+  </body>
+</html>

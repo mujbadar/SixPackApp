@@ -11,17 +11,17 @@
       <form class="" action="/sessions/new" method="post">
         <div class="form-row">
           <div class="form-group col-md-6">
-            <input type="text" class="form-contol" id="inputAddress" name="username" placeholder="Choose Username">
+            <input type="text" class="form-contol" id="inputAddress" name="username" value="<=%user.username%>">
           </div>
           <div class="form-group col-md-6">
-            <input type="password" class="form-contol" id="inputAddress" name="password" placeholder="Choose Password">
+            <input type="password" class="form-contol" id="inputAddress" name="password" value="<=%user.username%>">
           </div>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="inputEmail4" name="fname" placeholder="First Name">
+          <input type="text" class="form-control" id="inputEmail4" name="fname" value="<=%user.fname%>">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="inputPassword4" name="lname" placeholder="Last Name">
+          <input type="text" class="form-control" id="inputPassword4" name="lname" value="<=%user.lname%>">
         </div>
         <div class="form-row">
           <select name="gender" class="custom-select">

@@ -29,7 +29,6 @@ router.get('/:id', (req, res) => {
   Workout.findById(req.params.id, (error, foundWorkout) => {
     res.render('workouts/showpage.ejs', {
       workouts: foundWorkout,
-      excercises: foundWorkout.excercises
     })
   })
 })
@@ -58,7 +57,7 @@ router.get('/:id/edit', (req, res) => {
   })
 })
 
-router.put('/', (req, res) => {
+router.put('/:id', (req, res) => {
   Workout.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedWorkout) => {
     res.redirect('/workouts')
   })

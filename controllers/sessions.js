@@ -8,7 +8,7 @@ const Workout = require('../models/workout.js')
 ///////////
 
 //profile page
-router.get('/profile', (req, res) => {
+router.get('/:id', (req, res) => {
   res.render('sessions/profile.ejs', {
     currentUser: req.session.currentUser
   })
@@ -53,8 +53,11 @@ router.delete('/', (req, res) => {
 })
 
 //edit
-router.get('/edit', (req, res) => {
-  res.render('sessions/edit.ejs')
+router.get('/edit/:id', (req, res) => {
+  req.session.currentUser = req.params.id
+  res.render('sessions/edit.ejs', {
+    user: foundUser
+  })
 })
 
 module.exports = router

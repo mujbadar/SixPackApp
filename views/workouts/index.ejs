@@ -5,7 +5,11 @@
     <link rel="stylesheet" href="/css/workouts.css">
   </head>
   <body>
+    <% if (currentUser) { %>
+      <% include ../partials/sessions-menu.ejs %>
+    <%} else {%>
     <% include ../partials/inner-menu.ejs %>
+    <%}%>
     <h1>All Workouts</h1>
     <hr>
     <div class="card-columns tiles">

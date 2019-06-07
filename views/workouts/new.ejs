@@ -4,6 +4,7 @@
     <% include ../partials/header.ejs %>
   </head>
   <body>
+    <% if (currentUser) {%>
     <h1>Workout</h1>
     <form class="" action="/workouts" method="post">
       <div class="input-group mb-3">
@@ -59,6 +60,9 @@
       </div>
       <input type="submit" class="btn btn-primary" name="" value="Create Workout">
     </form>
+    <%} else {%>
+      <h1>Please Login</h1>
+    <%}%>
     <a href="/">Back</a>
   </body>
 </html>

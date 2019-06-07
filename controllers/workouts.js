@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
   Workout.find({}, (error, allWorkouts) => {
     if (error) res.send('Not found')
     else res.render('workouts/index.ejs', {
+      currentUser: req.session.currentUser,
       workouts: allWorkouts
     })
   })
@@ -18,7 +19,9 @@ router.get('/', (req, res) => {
 
 //new
 router.get('/new', (req, res) => {
-  res.render('workouts/new.ejs')
+  res.render('workouts/new.ejs', {
+    currentUser: req.session.currentUser
+  })
 })
 
 //showpage

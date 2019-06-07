@@ -39,7 +39,11 @@
       <div class="hero-text">
         <h1>SIXPACKAPP</h1>
         <h4>The only workout app you will need!</h4>
+        <% if (currentUser) {%>
+          <a class="btn btn-primary"href="/workouts/new">Make new workout</a>
+        <%} else {%>
         <a class="btn btn-primary"href="/sessions/new">Sign up</a>
+        <%}%>
         <a class="btn btn-secondary" href="/workouts">Show workouts</a>
       </div>
     </div>

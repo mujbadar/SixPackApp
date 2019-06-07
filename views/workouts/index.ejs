@@ -16,17 +16,17 @@
       <% for (let i = 0; i < workouts.length; i++) { %>
         <div class="card">
           <% if (workouts[i].type == 'cardio') { %>
-            <img src="images/icons/running.png" class="card-img-top" alt="cardio-img">
+            <img src="images/icons/running.png" class="card-img-top wo-icon" alt="cardio-img">
           <%} else if (workouts[i].type == 'weights') { %>
-            <img src="../images/icons/weightlifting.png" class="card-img-top" alt="weights-img">
+            <img src="../images/icons/weightlifting.png" class="card-img-top wo-icon" alt="weights-img">
           <%} else if (workouts[i].type == 'yoga') { %>
-            <img src="images/icons/yoga.png" class="card-img-top" alt="yoga-img">
+            <img src="images/icons/yoga.png" class="card-img-top wo-icon" alt="yoga-img">
           <%} else if (workouts[i].type == 'hiit') { %>
-            <img src="images/icons/heart.png" class="card-img-top" alt="hiit-img">
+            <img src="images/icons/heart.png" class="card-img-top wo-icon" alt="hiit-img">
           <%} else if (workouts[i].type == 'cycling') { %>
-            <img src="images/icons/bicycle.png" class="card-img-top" alt="cycling-img">
+            <img src="images/icons/bicycle.png" class="card-img-top wo-icon" alt="cycling-img">
           <%} else if (workouts[i].type == 'calisthenics') { %>
-            <img src="images/icons/pulling-up.png" class="card-img-top" alt="calisthenics-img">
+            <img src="images/icons/pulling-up.png" class="card-img-top wo-icon" alt="calisthenics-img">
           <%}%>
       <div class="card-body">
         <h5 class="card-title"><a href="/workouts/<%=workouts[i].id%>"><%=workouts[i].name%></a></h5>

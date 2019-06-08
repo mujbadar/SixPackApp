@@ -12,10 +12,10 @@ SixPackApp is a CRUD App with simple controllers for accounts and workouts. The 
 
 //////UI Images//////
 ![Image of homepage](/rm-images/UI-screenshots/landing-page.png)
-![Image of login page](rm-images/wireframe/login-page.png)
-![Image of new workout](rm-images/wireframe/new-workout.png)
-![Image of profile](rm-images/wireframe/profile-page.png)
-![Image of workout index](rm-images/wireframe/workout-index.png)
+![Image of login page](rm-images/UI-screenshots/login-page.png)
+![Image of new workout](rm-images/UI-screenshots/new-workout.png)
+![Image of profile](rm-images/UI-screenshots/profile-page.png)
+![Image of workout index](rm-images/UI-screenshots/workout-index.png)
 
 
 ///////Technology Used////////

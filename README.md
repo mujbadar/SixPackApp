@@ -3,19 +3,19 @@
 SixPackApp is all you need to plan and share workouts with a community of other gym enthusiasts. With a clean UI and features you can quickly customize your own workout or change it up with a host of community generated workouts.
 
 // Wireframe
-![Image of homepage](images/wireframe/SPAwf-home.png)
-![Image of login](images/wireframe/SPAwf-Login.png)
-![Image of profile](images/wireframe/SPAwf-profile.png)
+![Image of homepage](public/images/wireframe/SPAwf-home.png)
+![Image of login](public/images/wireframe/SPAwf-Login.png)
+![Image of profile](public/images/wireframe/SPAwf-profile.png)
 
 ///////Summary////////
 SixPackApp is a CRUD App with simple controllers for accounts and workouts. The workout showpage is publicly available but users must create/login to an account to edit and create custom workouts. It is supposed to function with social platform functionality giving the user the ability to interact with other gym enthusiasts as well as having a custom profile to track their own progress.
 
 //////UI Images//////
-![Image of homepage](images/UI-screenshots/landing-page.png)
-![Image of login page](images/wireframe/login-page.png)
-![Image of new workout](images/wireframe/new-workout.png)
-![Image of profile](images/wireframe/profile-page.png)
-![Image of workout index](images/wireframe/workout-index.png)
+![Image of homepage](public/images/UI-screenshots/landing-page.png)
+![Image of login page](public/images/wireframe/login-page.png)
+![Image of new workout](public/images/wireframe/new-workout.png)
+![Image of profile](public/images/wireframe/profile-page.png)
+![Image of workout index](public/images/wireframe/workout-index.png)
 
 
 ///////Technology Used////////

@@ -67,4 +67,7 @@ router.put('/:id', (req, res) => {
   })
 })
 
+router.put('/addworkout/:id', (req, res) => {
+  User.workouts
+})
 module.exports = router

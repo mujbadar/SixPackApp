@@ -6,17 +6,22 @@ const app = express()
 const mongoose = require('mongoose')
 const session = require('express-session')
 const methodOverride = require('method-override')
-
+const db = mongoose.connection
+const PORT = process.env.PORT || 3000
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/sixpackapp'
 
 //controllers
 const workoutsController = require('./controllers/workouts.js')
 const sessionsController = require('./controllers/sessions.js')
 
 //mongoose
-mongoose.connect('mongodb://localhost:27017/sixpackapp')
-mongoose.connection.once('open', () => {
-  console.log('connected to mongo');
-})
+db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
+db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
+db.on('disconnected', () => console.log('mongo disconnected'));
+
+// open the connection to mongo
+db.on('open' , ()=>{});
+
 
 //session
 app.use(session({
@@ -44,6 +49,6 @@ app.get('/', (req, res) => {
 })
 
 //Listen
-app.listen(3000, (req, res) => {
-  console.log('listening');
+app.listen(PORT, () => {
+  console.log('listening on port :', PORT);
 })

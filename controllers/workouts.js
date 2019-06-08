@@ -58,6 +58,7 @@ router.get('/:id/edit', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
+  console.log(req.params.id)
   Workout.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedWorkout) => {
     res.redirect('/workouts')
   })

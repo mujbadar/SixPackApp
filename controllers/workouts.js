@@ -36,6 +36,7 @@ router.get('/:id', (req, res) => {
 //create workout
 router.post('/', (req, res) => {
   Workout.create(req.body, (err, createdWorkout) => {
+    userID = req.session.currentUser.id
     if (err) res.send('there was an error creating ')
     else res.redirect('/')
   })
@@ -58,7 +59,6 @@ router.get('/:id/edit', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-  console.log(req.params.id)
   Workout.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedWorkout) => {
     res.redirect('/workouts')
   })

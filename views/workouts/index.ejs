@@ -31,13 +31,7 @@
       <div class="card-body">
         <h5 class="card-title"><a href="/workouts/<%=workouts[i].id%>"><%=workouts[i].name%></a></h5>
         <p class="card-text">Description: <%=workouts[i].description%></p>
-        <p>Routine:</p>
-        <ul>
-        <% workouts[i].excercises.title.forEach((title)=>{ %>
-          <li class="card-text"><%=title%></li>
-        <%})%>
-      </ul>
-      <p class="card-text text-muted">Catergory: <%=workouts[i].type%></p>
+      <p class="card-text text-muted">Category: <%=workouts[i].type%></p>
       </div>
     </div>
     <%}%>

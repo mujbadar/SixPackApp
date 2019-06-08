@@ -35,6 +35,7 @@ router.get('/:id', (req, res) => {
 
 //create workout
 router.post('/', (req, res) => {
+  req.body.userID = req.session.currentUser.id
   Workout.create(req.body, (err, createdWorkout) => {
     userID = req.session.currentUser.id
     if (err) res.send('there was an error creating ')

@@ -10,7 +10,7 @@ const Workout = require('../models/workout.js')
 //profile page
 router.get('/profile', (req, res) => {
   res.render('sessions/profile.ejs', {
-    users: req.session.currentUser
+    currentUser: req.session.currentUser
   })
 })
 
@@ -51,6 +51,7 @@ router.delete('/', (req, res) => {
 })
 
 //edit
+<<<<<<< HEAD
 router.get('/edit', (req, res) => {
   User.findById(req.params.id, (error, foundUser) => {
     res.render('sessions/edit.ejs', {
@@ -63,6 +64,16 @@ router.put('/', (req, res) => {
   User.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedUser) => {
     res.redirect('/')
   })
+=======
+router.get('/edit/:id', (req, res) => {
+  req.session.currentUser = req.params.id
+  res.render('sessions/edit.ejs', {
+    user: foundUser
+  })
 })
 
+router.put('/addworkout/:id', (req, res) => {
+  User.workouts
+>>>>>>> a214c5353c615b60cddcbbc7fb3ad18673a723f7
+})
 module.exports = router

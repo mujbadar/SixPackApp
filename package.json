@@ -2,7 +2,7 @@
   "name": "sixpackapp",
   "version": "1.0.0",
   "engines": {
-    "node": "10.15.3"
+    "node": "12.4.0"
   },
   "description": "// Wireframe ![Image of homepage](images/SPAwf-home.png) ![Image of homepage](images/SPAwf-Login.png) ![Image of homepage](images/SPAwf-profile.png)",
   "main": "server.js",

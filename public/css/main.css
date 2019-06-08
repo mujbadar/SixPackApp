@@ -8,20 +8,6 @@ nav {
   margin-top: .5em;
 }
 
-nav a {
-  text-decoration: none;
-}
-
-nav ul {
-  margin-left: 9em;
-}
-
-nav li {
-  list-style: none;
-  display: inline-flex;
-  margin-left: 3em;
-}
-
 .logo {
   font-size: 2em;
   color: #007bff;

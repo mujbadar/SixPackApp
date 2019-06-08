@@ -8,37 +8,38 @@
     <% include ../partials/inner-menu.ejs %>
     <div class="main">
       <h1>Edit Profile</h1>
-      <form class="" action="/sessions/<%=users.id%>?_method=PUT" method="post">
+      <form class="" action="/sessions/new" method="post">
         <div class="form-row">
           <div class="form-group col-md-6">
-            <input type="text" class="form-contol" id="inputAddress" name="username" value="<%=users.username%>">
+            <input type="text" class="form-contol" id="inputAddress" name="username" value="<=%user.username%>">
           </div>
           <div class="form-group col-md-6">
-            <input type="text" class="form-contol" id="inputAddress" name="password" value="<%=users.password%>">
+            <input type="password" class="form-contol" id="inputAddress" name="password" value="<=%user.username%>">
+          </div>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="inputEmail4" name="fname" value="<%=users.fname%>">
+          <input type="text" class="form-control" id="inputEmail4" name="fname" value="<=%user.fname%>">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="inputPassword4" name="lname" value="<%=users.lname%>">
+          <input type="text" class="form-control" id="inputPassword4" name="lname" value="<=%user.lname%>">
         </div>
         <div class="form-row">
-          <select name="gender" class="custom-select" value="<%=users.gender%>">
+          <select name="gender" class="custom-select">
             <option selected>Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select><br>
           <div class="form-group col-md-2">
-            <input type="text" name="dob" class="form-control" id="inputCity" value="<%=users.dob%>">
+            <input type="text" name="dob"class="form-control" id="inputCity" placeholder="D.O.B">
           </div>
           <div class="form-group col-md-2">
-            <input type="text" name="height" class="form-control" id="inputCity" value="<%=users.height%>">
+            <input type="text" name="height" class="form-control" id="inputCity" placeholder="Height">
           </div>
           <div class="form-group col-md-2">
-            <input type="text" name="weight" class="form-control" id="inputCity" value="<%=users.weight%>">
+            <input type="text" name="weight" class="form-control" id="inputCity" placeholder="Weight">
           </div>
         </div>
-      <input class="btn btn-primary" type="submit" name="" value="Save Changes">
+      <input class="btn btn-primary" type="submit" name="" value="Create account">
       <a href="/sessions/profile">Cancel</a>
     </form>
     </div>
